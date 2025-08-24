@@ -1,22 +1,24 @@
 #include <iostream>
 using namespace std;
 
-void isPowerOfFour(int n){
+void isPowerOfFour(int n)
+{
     if (n == 1)
     {
-        cout<<"true"<<endl;
+        cout << "true" << endl;
     }
     else
     {
-        while (((n != 0 )&&(n % 4 == 0)) || n==1)
+        while (((n != 0) && (n % 4 == 0)) || n == 1) // Divides the number and checks for the remainder in every itteration until n=0
         {
             n = n / 4;
         }
-        if(n==0){
-            cout<<"true"<<endl;
+        if (n == 0)
+        {
+            cout << "true" << endl;
         }
     }
-    cout<<"false"<<endl;
+    cout << "false" << endl;
 }
 
 int main()
