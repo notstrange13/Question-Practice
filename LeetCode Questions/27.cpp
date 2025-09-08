@@ -35,3 +35,5 @@ int main()
 
     return 0;
 }
+
+// The answer must be 4
