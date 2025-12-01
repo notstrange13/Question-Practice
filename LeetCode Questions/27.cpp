@@ -6,20 +6,16 @@ class Solution
 public:
     int removeElement(vector<int> &nums, int val)
     {
-        int count = -1;
-
+        int left = 0;
         for (int i = 0; i < nums.size(); i++)
         {
             if (nums[i] != val)
             {
-                count++;
-            }
-            else
-            {
-                continue;
+                nums[left] = nums[i];
+                left++;
             }
         }
-        return count;
+        return left;
     }
 };
 
@@ -31,11 +27,9 @@ int main()
 
     int ans = sol.removeElement(nums, val);
 
-    cout << ans << endl;
+    cout<<ans<<endl;
 
     return 0;
 }
 
 // The answer must be 4
-
-
